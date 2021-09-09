@@ -44,7 +44,7 @@ def random_array(number_of_elements: int, min_value: int = -100, max_value: int 
 
 
 def main(argv):
-    array_for_sort, ascending = [], None
+    _array_for_sort, _ascending = [], None
     try:
         opts, args = getopt.getopt(argv, "ha:o:r:", ["array=", "order=", "random="])
     except getopt.GetoptError:
@@ -56,13 +56,13 @@ def main(argv):
             sys.exit(2)
         if opt in ("-a", "--array"):
             try:
-                array_for_sort = [int(i) for i in arg.split(',') if i]
+                _array_for_sort = [int(i) for i in arg.split(',') if i]
             except ValueError:
                 print('main.py -a <int array> or -r <number of elements> -o <asc/desc>')
                 sys.exit(2)
         if opt in ("-o", "--order"):
             if arg in ('asc', 'desc'):
-                ascending = True if arg == 'asc' else False
+                _ascending = True if arg == 'asc' else False
             else:
                 print('main.py -a <int array> or -r <number of elements> -o <asc/desc>')
                 sys.exit(2)
@@ -70,17 +70,17 @@ def main(argv):
             try:
                 number_of_elements = int(arg)
                 if number_of_elements > 0:
-                    array_for_sort = random_array(number_of_elements)
+                    _array_for_sort = random_array(number_of_elements)
                 else:
                     print('main.py -a <int array> or -r <number of elements> -o <asc/desc>')
                     sys.exit(2)
             except ValueError:
                 print('main.py -a <int array> or -r <number of elements> -o <asc/desc>')
                 sys.exit(2)
-    if not array_for_sort or ascending is None:
+    if not _array_for_sort or _ascending is None:
         print('main.py -a <int array> or -r <number of elements> -o <asc/desc>')
         sys.exit(2)
-    return array_for_sort, ascending
+    return _array_for_sort, _ascending
 
 
 if __name__ == '__main__':
