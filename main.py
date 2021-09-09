@@ -21,16 +21,15 @@ def quick_sort(array: list[int], ascending: bool = True) -> list[int]:
 
     for i in range(1, len(array)):
         count += 1
-        if array[i] <= array[0]:
+        if (array[i] <= array[0] and ascending) or (array[i] >= array[0] and not ascending):
             current_position += 1
             swaps += 1
             array[i], array[current_position] = array[current_position], array[i]
-
     array[0], array[current_position] = array[current_position], array[0]
 
-    return [*quick_sort(array[:current_position] if ascending else array[current_position + 1:], ascending),
+    return [*quick_sort(array[:current_position], ascending),
             array[current_position],
-            *quick_sort(array[current_position + 1:] if ascending else array[:current_position], ascending)]
+            *quick_sort(array[current_position + 1:], ascending)]
 
 
 def random_array(number_of_elements: int, min_value: int = -100, max_value: int = 100) -> list[int]:
