@@ -1,14 +1,10 @@
 class Element:
     def __init__(self, value, priority: int):
         self.value = value
-        self.__priority = priority
-
-    @property
-    def priority(self):
-        return self.__priority
+        self.priority = priority
 
     def __str__(self):
-        return 'Value : {value}, Priority : {priority}'.format(value=self.value, priority=self.__priority)
+        return 'Value : {value}, Priority : {priority}'.format(value=self.value, priority=self.priority)
 
 
 class QueueWithPriority:
