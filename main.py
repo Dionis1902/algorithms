@@ -3,9 +3,6 @@ class QueueWithPriority:
         self.__queue = list()
 
     def insert_with_priority(self, value, priority: int = 0):
-        if not self:
-            self.__queue.insert(0, QueueWithPriority.__Element(value, priority))
-            return
         for i, element in enumerate(self.__queue):
             if priority >= element.priority:
                 self.__queue.insert(i, QueueWithPriority.__Element(value, priority))
@@ -45,11 +42,12 @@ class QueueWithPriority:
 
 
 if __name__ == '__main__':
-    q = QueueWithPriority()
-    q.insert_with_priority([24], 4)
-    q.insert_with_priority(56, 0)
-    q.insert_with_priority([3524], 2)
-    q.insert_with_priority([3456], 5)
-    q.insert_with_priority([67967], 2)
-    q.insert_with_priority([67967], 45)
-    print(q.get_highest_priority_element())
+    queue = QueueWithPriority()
+    queue.insert_with_priority(23, 4)
+    queue.insert_with_priority(56, 0)
+    queue.insert_with_priority(567, 2)
+    queue.insert_with_priority(346, 5)
+    queue.insert_with_priority(679, 2)
+    queue.insert_with_priority(45746, 45)
+    for element in queue:
+        print(element)
