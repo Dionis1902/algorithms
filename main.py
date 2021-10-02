@@ -39,5 +39,5 @@ def pretty_print(array, time_block: int = 30, start_time: int = 540):
 
 
 if __name__ == '__main__':
-    test = [(0, 1), (16, 17), (3, 5), (4, 8), (10, 12), (9, 10), (12, 15)]
-    pretty_print(test)
+    time_array = [(0, 1), (16, 17), (3, 5), (4, 8), (10, 12), (9, 10), (12, 15)]
+    pretty_print(time_array)
