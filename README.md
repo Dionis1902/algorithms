@@ -1,12 +1,10 @@
-### Laboratory work 2 (data structures)
+### Laboratory work 4 
 
-One of the data structures should be implemented. Mine is *priority queue*.
+Breadth-first search (BFS) is an algorithm for searching a tree data structure for a node that satisfies a given property. It starts at the tree root and explores all nodes at the present depth prior to moving on to the nodes at the next depth level. Extra memory, usually a queue, is needed to keep track of the child nodes that were encountered but not yet explored.
 
-You should perform the operations of inserting, returning an element without deleting, deleting (for example, returning and deleting the first element from the stack), and finding a specific element (if such an operation is supported by the data structure).
-
-  ### How to run
+### How to run
   + Clone this repository with command `git clone https://github.com/DioniS1902/algorithms.git`
-  + Choose branch quicksort with command `git checkout lab2`
-  + Go into folder with files with command `cd algorithms`
+  + Go into folder with files with command `cd algorithms`  
+  + Choose branch quicksort with command `git checkout lab4`
   + run command `python3 main.py` on Mac/Linux
   + run command `py main.py` on Windows
