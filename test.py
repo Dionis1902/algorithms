@@ -3,11 +3,8 @@ from main import *
 
 
 class Test(unittest.TestCase):
-    def test_a_g(self):
-        self.assertEqual(breadth_first_search(test_graph, 'a', 'e'), True)
-
-    def test_a_z(self):
-        self.assertEqual(breadth_first_search(test_graph, 'a', 'z'), False)
+    def test(self):
+        self.assertEqual(sum(prima(TEST_GRAPH).values()), 18)
 
 
 if __name__ == '__main__':
