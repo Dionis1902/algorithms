@@ -1,37 +1,40 @@
-import re
+def get_litres_dict(text):
+    result_dict = {}
+
+    for i in range((text_len := len(text)) - 2, -1, -1):
+        if text[i] not in result_dict.keys():
+            result_dict[text[i]] = text_len - i - 1
+
+    if text[text_len - 1] not in result_dict.keys():
+        result_dict[text[text_len - 1]] = text_len
+
+    result_dict['*'] = text_len
+    return result_dict
 
 
-def get_all_pow(number, str_number):
-    return_array = []
-    max_len = len(re.split(r'^0*', str_number)[1])
-    square_number = ''
-    while len(square_number) <= max_len:
-        square_number = bin(number ** len(return_array)).replace('0b', '')
-        return_array.append(square_number)
-    return return_array
-
-
-def find(number, str_number):
-    if number < 0 or number > 100 or len(str_number) > 100:
+def boyer_moore(search_text, text):
+    search_text_len = len(search_text)
+    result_dict = get_litres_dict(search_text)
+    if (text_len := len(text)) < search_text_len:
         return -1
-    array_of_pow = get_all_pow(number, str_number)[::-1]
-    i = 0
-    while True:
-        temp = ''
-        for element in array_of_pow:
-            if not str_number.find(element):
-                temp, i = element, i + 1
+    i = search_text_len - 1
+
+    while i < text_len:
+        k = 0
+        is_break = False
+        for j in range(search_text_len - 1, -1, -1):
+            if text[i - k] != search_text[j]:
+                if j == search_text_len - 1:
+                    offset = result_dict[text[i]] if result_dict.get(text[i], False) else result_dict['*']
+                else:
+                    offset = result_dict[search_text[j]]
+                i += offset
+                is_break = True
                 break
-        if len(temp):
-            str_number = str_number[len(temp):]
-        else:
-            if not len(str_number):
-                return i
-            return -1
+            k += 1
+        if not is_break:
+            return i - k + 1
+    return -1
 
 
-if __name__ == '__main__':
-    count = int(input())
-    for _ in range(count):
-        i_str_number, i_number = [i for i in input().split(' ')][:2]
-        print(find(int(i_number), i_str_number))
+print(boyer_moore("world", "hello world!"))
