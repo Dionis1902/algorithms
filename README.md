@@ -1,7 +1,7 @@
-## All algorithms and structures
+## All Algorithms and Structures
 
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Navigation</summary>
   <ol>
     <li>
       <a href="#sorting-algorithms">Sorting algorithms</a>
