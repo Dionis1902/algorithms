@@ -19,3 +19,7 @@
 > ### InsertionSort
 > ##### Complexity : O(n²)
 > Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
+
+> ### SelectionSort
+> ##### Complexity : O(n²)
+> The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from unsorted part and putting it at the beginning. The algorithm maintains two subarrays in a given array.
