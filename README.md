@@ -51,3 +51,10 @@
 > - Every item has a priority associated with it.
 > - An element with high priority is dequeued before an element with low priority.
 > - If two elements have the same priority, they are served according to their order in the queue.
+
+> ### Deque
+> #### Complexity:
+>  - Insert - Front : O(1), Back : O(n)
+>  - Peek - Front : O(1), Back : O(n)
+> 
+> Deque or Double Ended Queue is a generalized version of Queue data structure that allows insert and delete at both ends.
