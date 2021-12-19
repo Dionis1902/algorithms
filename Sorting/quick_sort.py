@@ -1,11 +1,13 @@
 def partition(arr, start, end, reverse):
     pivot = arr[end]
     pivot_index = start-1
+
     for i in range(start, end):
         if (arr[i] < pivot) == reverse:
             pivot_index += 1
             arr[pivot_index], arr[i] = arr[i], arr[pivot_index]
     arr[pivot_index+1], arr[end] = arr[end], arr[pivot_index+1]
+
     return pivot_index+1
 
 

@@ -3,6 +3,7 @@ def merge(arr, start, middle, end, reverse):
     i = start
     j = middle+1
     k = 0
+
     while i <= middle and j <= end:
         if (arr[i] <= arr[j]) == reverse:
             temp[k] = arr[i]
