@@ -1,4 +1,31 @@
 ## All algorithms and structures
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#sorting-algorithms">Sorting algorithms</a>
+      <ul>
+        <li><a href="#quick-sort">Quick Sort</a></li>
+        <li><a href="#merge-sort">Merge Sort</a></li>
+        <li><a href="#heap-sort">Heap Sort</a></li>
+        <li><a href="#bubble-sort">Bubble Sort</a></li>
+        <li><a href="#insertion-sort">Insertion Sort</a></li>
+        <li><a href="#selection-sort">Selection Sort</a></li>
+        <li><a href="#random-sort">Random Sort</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#structures">Structures</a>
+      <ul>
+        <li><a href="#priority-queue">Priority Queue</a></li>
+        <li><a href="#deque">Deque</a></li>
+        <li><a href="#binary-search-tree">Binary Search Tree</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
+
 ### Sorting algorithms
 >  ### Quick Sort 
 > #### Complexity:
@@ -48,6 +75,7 @@
 >  - Worst - O(∞)
 > 
 > In computer science, RandomSort (also known as permutation sort, stupid sort, bogosort or slowsort) is a highly inefficient sorting algorithm based on the generate and test paradigm. The function successively generates permutations of its input until it finds one that is sorted. It is not useful for sorting, but may be used for educational purposes, to contrast it with more efficient algorithms.
+***
 ### Structures
 > ### Priority Queue
 > #### Complexity:

@@ -62,11 +62,13 @@ class PriorityQueue:
 
 if __name__ == '__main__':
     priority_queue = PriorityQueue()
+
     priority_queue.insert('5th', 0)
     priority_queue.insert('2nd', 3)
     priority_queue.insert('3rd', 2)
     priority_queue.insert('1st', 4)
     priority_queue.insert('4th', 1)
+
     print(priority_queue.pop())
     print(priority_queue.pop())
     print(priority_queue.pop())
