@@ -35,49 +35,49 @@
 </details>
 
 ### Sorting algorithms
->  ### [Quick Sort](Sorting/bubble_sort.py)
+>  ### [Quick Sort](Sorting/quick_sort.py)
 > #### Complexity:
 >  - Average - O(nlog(n))
 >  - Worst - O(n²)
 > 
 > Quicksort is a divide-and-conquer algorithm. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. For this reason, it is sometimes called partition-exchange sort. The sub-arrays are then sorted recursively. This can be done in-place, requiring small additional amounts of memory to perform the sorting.
   
-> ### Merge Sort
+> ### [Merge Sort](Sorting/merge_sort.py)
 > #### Complexity:
 >  - Average - O(nlog(n))
 >  - Worst - O(nlog(n))
 > 
 > Like QuickSort, Merge Sort is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.
 
-> ### Heap Sort
+> ### [Heap Sort](Sorting/heap_sort.py)
 > #### Complexity:
 >  - Average - O(nlog(n))
 >  - Worst - O(nlog(n))
 > 
 > Heap sort is a comparison-based sorting technique based on Binary Heap data structure. It is similar to selection sort where we first find the minimum element and place the minimum element at the beginning. We repeat the same process for the remaining elements.
 
-> ### Bubble Sort
+> ### [Bubble Sort](Sorting/bubble_sort.py)
 > #### Complexity:
 >  - Average - O(n²)
 >  - Worst - O(n²)
 > 
 > Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
 
-> ### Insertion Sort
+> ### [Insertion Sort](Sorting/insertion_sort.py)
 > #### Complexity:
 >  - Average - O(n²)
 >  - Worst - O(n²)
 > 
 > Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
 
-> ### Selection Sort
+> ### [Selection Sort](Sorting/selection_sort.py)
 > #### Complexity:
 >  - Average - O(n²)
 >  - Worst - O(n²)
 > 
 > The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from unsorted part and putting it at the beginning. The algorithm maintains two subarrays in a given array.
 
-> ### Random Sort
+> ### [Random Sort](Sorting/random_sort.py)
 > #### Complexity:
 >  - Average - O(???)
 >  - Worst - O(∞)
@@ -85,7 +85,7 @@
 > In computer science, RandomSort (also known as permutation sort, stupid sort, bogosort or slowsort) is a highly inefficient sorting algorithm based on the generate and test paradigm. The function successively generates permutations of its input until it finds one that is sorted. It is not useful for sorting, but may be used for educational purposes, to contrast it with more efficient algorithms.
 ***
 ### Data Structures
-> ### Priority Queue
+> ### [Priority Queue](Structures/priority_queue.py)
 > #### Complexity:
 >  - Insert - O(nlog(n))
 >  - Peek - O(1)
@@ -95,14 +95,14 @@
 > - An element with high priority is dequeued before an element with low priority.
 > - If two elements have the same priority, they are served according to their order in the queue.
 
-> ### Deque
+> ### [Deque](Structures/deque.py)
 > #### Complexity:
 >  - Insert - Front : O(1), Back : O(n)
 >  - Peek - Front : O(1), Back : O(n)
 > 
 > Deque or Double Ended Queue is a generalized version of Queue data structure that allows insert and delete at both ends.
 
-> ### Binary Search Tree
+> ### [Binary Search Tree](Structures/binary_search_tree.py)
 > #### Complexity:
 >  - Insert - O(log(n))
 >  - Peek - O(log(n))
@@ -114,7 +114,7 @@
 > - The left and right subtree each must also be a binary search tree. 
 > - There must be no duplicate nodes.
 
-> ### Hash Table
+> ### [Hash Table](Structures/hash_table.py)
 > #### Complexity:
 >  - Insert - O(1)
 >  - Peek - O(1)
@@ -125,7 +125,7 @@
 > - Symbol Tables in Compiler/Interpreter
 > - Dictionaries, caches, etc.
 
-> ### Stack
+> ### [Stack](Structures/stack.py)
 > #### Complexity:
 >  - Insert - O(1)
 >  - Peek - O(1)
@@ -134,7 +134,7 @@
 
 ***
 ### Graphs
-> ### Breadth-first search (BFS)
+> ### [Breadth-first search (BFS)](Graphs/bfs.py)
 > #### Complexity:
 >  - Search - O(V + E)
 > 
