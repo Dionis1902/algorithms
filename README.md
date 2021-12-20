@@ -35,7 +35,7 @@
 </details>
 
 ### Sorting algorithms
->  ### Quick Sort 
+>  ### [Quick Sort](Sorting/bubble_sort.py)
 > #### Complexity:
 >  - Average - O(nlog(n))
 >  - Worst - O(n²)
