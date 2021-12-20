@@ -1,4 +1,4 @@
-## All Algorithms and Structures
+## All Algorithms and Data Structures
 
 <details>
   <summary>Navigation</summary>
@@ -16,11 +16,12 @@
       </ul>
     </li>
     <li>
-      <a href="#structures">Structures</a>
+      <a href="#data-structures">Data Structures</a>
       <ul>
         <li><a href="#priority-queue">Priority Queue</a></li>
         <li><a href="#deque">Deque</a></li>
         <li><a href="#binary-search-tree">Binary Search Tree</a></li>
+        <li><a href="#hash-table">Hash Table</a></li>
       </ul>
     </li>
   </ol>
@@ -76,7 +77,7 @@
 > 
 > In computer science, RandomSort (also known as permutation sort, stupid sort, bogosort or slowsort) is a highly inefficient sorting algorithm based on the generate and test paradigm. The function successively generates permutations of its input until it finds one that is sorted. It is not useful for sorting, but may be used for educational purposes, to contrast it with more efficient algorithms.
 ***
-### Structures
+### Data Structures
 > ### Priority Queue
 > #### Complexity:
 >  - Insert - O(nlog(n))
@@ -105,3 +106,14 @@
 > - The right subtree of a node contains only nodes with keys greater than the node’s key.
 > - The left and right subtree each must also be a binary search tree. 
 > - There must be no duplicate nodes.
+
+> ### Hash Table
+> #### Complexity:
+>  - Insert - O(1)
+>  - Peek - O(1)
+> 
+> Hashing is a data structure that is used to store a large amount of data, which can be accessed in O(1) time by operations such as search, insert and delete. Various Applications of Hashing are:
+> - Indexing in database
+> - Cryptography
+> - Symbol Tables in Compiler/Interpreter
+> - Dictionaries, caches, etc.
