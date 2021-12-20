@@ -1,5 +1,7 @@
 ## All Algorithms and Data Structures
 
+### [Site for visualisation all Algorithms and Data Structures](https://visualgo.net/ru)
+
 <details>
   <summary>Navigation</summary>
   <ol>
@@ -28,20 +30,21 @@
     <li>
       <a href="#graphs">Graphs</a>
       <ul>
-        <li><a href="#breadth-first-search-(bfs)">Breadth-first search (BFS)</a></li>
+        <li><a href="#breadth-first-search-(bfs)">Breadth First Search (BFS)</a></li>
+        <li><a href="#depth-first-search-(dfs)">Depth First Search (DFS)</a></li>
       </ul>
     </li>
   </ol>
 </details>
 
 ### Sorting algorithms
->  ### [Quick Sort](Sorting/quick_sort.py)
+> ### [Quick Sort](Sorting/quick_sort.py)
 > #### Complexity:
 >  - Average - O(nlog(n))
 >  - Worst - O(n²)
 > 
 > Quicksort is a divide-and-conquer algorithm. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. For this reason, it is sometimes called partition-exchange sort. The sub-arrays are then sorted recursively. This can be done in-place, requiring small additional amounts of memory to perform the sorting.
-  
+
 > ### [Merge Sort](Sorting/merge_sort.py)
 > #### Complexity:
 >  - Average - O(nlog(n))
@@ -134,8 +137,14 @@
 
 ***
 ### Graphs
-> ### [Breadth-first search (BFS)](Graphs/bfs.py)
+> ### [Breadth First Search (BFS)](Graphs/bfs.py)
 > #### Complexity:
 >  - Search - O(V + E)
 > 
 > Breadth-first search (BFS) is an algorithm used for tree traversal on graphs or tree data structures. BFS can be easily implemented using recursion and data structures like dictionaries and lists.
+
+> ### [Depth First Search (DFS)](Graphs/dfs.py)
+> #### Complexity:
+>  - Search - O(V + E)
+> 
+> Depth First Traversal (or Search) for a graph is similar to Depth First Traversal of a tree. The only catch here is, unlike trees, graphs may contain cycles (a node may be visited twice). To avoid processing a node more than once, use a boolean visited array. 
