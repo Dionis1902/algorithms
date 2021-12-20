@@ -31,8 +31,7 @@ class BinarySearchTree:
             self.__delete(self.__root, data)
 
     def show_tree(self):
-        self.__show_tree(self.__root)
-        print()
+        print(', '.join(str(element) for element in self.__show_tree(self.__root)))
 
     def find(self, data):
         return self.__find(self.__root, data) is not None
@@ -83,9 +82,9 @@ class BinarySearchTree:
     def __show_tree(self, root):
         if not root:
             return
-        self.__show_tree(root.right)
-        print(root.data, end=' ')
-        self.__show_tree(root.left)
+        yield root.data
+        yield from self.__show_tree(root.right)
+        yield from self.__show_tree(root.left)
 
     def __find(self, root, data):
         if not root:
