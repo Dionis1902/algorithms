@@ -2,8 +2,6 @@
 
 ### [Site for visualisation all Algorithms and Data Structures](https://visualgo.net/ru)
 
-<details>
-  <summary>Navigation</summary>
   <ol>
     <li>
       <a href="#sorting-algorithms">Sorting algorithms</a>
@@ -32,10 +30,11 @@
       <ul>
         <li><a href="#breadth-first-search-(bfs)">Breadth First Search (BFS)</a></li>
         <li><a href="#depth-first-search-(dfs)">Depth First Search (DFS)</a></li>
+        <li><a href="#dijkstra">Dijkstra</a></li>
+        <li><a href="#bellman-ford">Bellman Ford</a></li>
       </ul>
     </li>
   </ol>
-</details>
 
 ### Sorting algorithms
 > ### [Quick Sort](Sorting/quick_sort.py)
