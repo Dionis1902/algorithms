@@ -1,39 +1,40 @@
-def dijkstra(graph, source):
-    if 0 > source > len(graph):
+def dijkstra(graph, edges_count, source):
+    if edges_count < source < 0:
         return
 
-    def __min_distance(dist, spt_set):
+    def __min_distance(_dist, _spt_set):
         min_distance = float('inf')
-        min_index = 0
-        for vertex in range(vertex_count):
-            if dist[vertex] < min_distance and spt_set[vertex] is False:
-                min_distance = dist[vertex]
-                min_index = vertex
+        _min_index = 0
+        for vertex in range(edges_count):
+            if _dist[vertex] < min_distance and _spt_set[vertex] is False:
+                min_distance = _dist[vertex]
+                _min_index = vertex
 
-        return min_index
+        return _min_index
 
-    vertex_count = len(graph)
-    dist = [float('inf')] * vertex_count
+    dist = [float("Inf")] * edges_count
     dist[source] = 0
-    spt_set = [False] * vertex_count
+    spt_set = [False] * edges_count
 
-    for _ in range(vertex_count):
+    for _ in range(edges_count):
         min_index = __min_distance(dist, spt_set)
-
         spt_set[min_index] = True
-        for vertex in range(vertex_count):
-            if graph[min_index][vertex] > 0 and spt_set[vertex] is False \
-                    and dist[vertex] > dist[min_index] + graph[min_index][vertex]:
-                dist[vertex] = dist[min_index] + graph[min_index][vertex]
+        for edge, connected_edge, weight in graph:
+            if dist[edge] != float("Inf") and spt_set[connected_edge] is False \
+                    and dist[edge] + weight < dist[connected_edge]:
+                dist[connected_edge] = dist[edge] + weight
+
     return dist
 
 
 if __name__ == '__main__':
-    #              A   B   C   D   E
-    test_graph = [[0,  14, 2,  4,  0],  # A
-                  [14, 0,  0,  0,  1],  # B
-                  [2,  0,  0,  1,  0],  # C
-                  [4,  0,  1,  0,  0],  # D
-                  [0,  1,  0,  0,  0]]  # E
+    test_graph = [
+        (0, 1, 14),
+        (0, 2, 2),
+        (0, 3, 4),
+        (1, 4, 1),
+        (2, 3, 1),
+        (3, 2, 1),
+        (4, 1, 1)]
 
-    print(dijkstra(test_graph, 0))
+    print(dijkstra(test_graph, 5, 0))

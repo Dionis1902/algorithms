@@ -155,3 +155,9 @@
 >  - Search -  O(V + Elog(V))
 > 
 > Dijkstra’s algorithm is very similar to Prim’s algorithm for minimum spanning tree. Like Prim’s MST, we generate an SPT (shortest path tree) with a given source as root. We maintain two sets, one set contains vertices included in the shortest-path tree, another set includes vertices not yet included in the shortest-path tree. At every step of the algorithm, we find a vertex that is in the other set (set of not yet included) and has a minimum distance from the source.
+
+> ### [Bellman Ford](Graphs/bellman_ford.py)
+> #### Complexity:
+>  - Search -  O(VE)
+> 
+> Bellman Ford algorithm helps us find the shortest path from a vertex to all other vertices of a weighted graph. It is similar to Dijkstra's algorithm but it can work with graphs in which edges can have negative weights.
